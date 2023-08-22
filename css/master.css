@@ -429,6 +429,11 @@ margin-right:30px ;
     .portfolio .imgs-container .box{
         width: 100%;
     }
+    .portfolio .menu ul li {
+        margin-left: 5px;
+        padding: 10px;
+    
+    }
 }
 .video-section{
     position: relative;
@@ -657,6 +662,9 @@ margin-right:30px ;
     .testimonials .container .testo .person{
         flex-direction: column;
     }
+    .testimonials .container .testo .person img{
+        margin-right: 0;
+    }
     
 }
 @media (min-width:992px){
@@ -871,6 +879,7 @@ margin-right:30px ;
 .subscribe form{
     width: 70%;
     max-width: 100%;
+    display: flex;
 }
 .subscribe .container input[type="email"]{
     padding: 20px 20px 20px 50px;
@@ -880,10 +889,7 @@ margin-right:30px ;
     caret-color: var(--main-color);
     border-right: none;
 }
-.subscribe form{
-    display: flex;
 
-}
 .subscribe .container input[type="submit"]{
     width: 130px;
     background-color: var(--main-color);
@@ -894,11 +900,24 @@ margin-right:30px ;
     border: 1px solid;
     border-left: none;
 }
+@media (max-width:678px){
+    .subscribe .container form{
+        width: 100%;
+    }
+    .subscribe .container input[type="email"]{
+        width: calc(100% - 130px);
+
+    }
+}
+
 .subscribe .container form i{
+    top: 50px;
     position: relative;
-    transform: translateY(33%);
+    top: 50%;
     color: white;
     left: 33px;
+    margin: auto 0;
+    font-size: 18px;
 
 }
 .subscribe .container input[type="email"]::placeholder{
@@ -917,5 +936,134 @@ margin-right:30px ;
     .subscribe .container p{
         margin: 30px 0 0 ;
     }
+}
+.contact .section{
+    display: flex;
+    justify-content: space-between;
+}
+.contact .section form{
+    flex-basis: 60%;
+}
+.contact .section form input:not(:last-child),textarea {
+    display: block;
+    width: 100%;
+    padding: 20px 0 20px 15px;
+    border: 1px solid #CCC;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.contact .section form input:not(:last-child)::placeholder,textarea::placeholder{
+    color: black;
+}
+.contact .section form textarea{
+    height: 200px;
+}
+.contact .section .info{
+    flex-basis: 35%;
+}
+.contact .section form input:nth-child(4){
+    color: white;
+    background: var(--main-color);
+    border: none;
+    padding: 20px 40px;
+    margin-top: 30px;
+    display: flex;
+    margin-left: auto;
+}
+.contact .section .info h4{
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.contact .section .info span.phone{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: normal;
+    color: #777;
+}
+.contact .section .info address span{
+    color: #777;
+    line-height: 2;
+
+
+}
+.contact .section .info address h4{
+    font-style: normal;
+}
+.contact .section .info address{
+    margin-top: 65px;
+}
+@media (max-width:976px){
+    .contact .section{
+        flex-direction: column;
+    }
+    .contact .section .info{
+        order: -1;
+        text-align: center;
+        margin-bottom: 30px;
+       
+    }
+    .contact .section .info address{
+        margin-top: 30px;
+    }
+    .contact .section .info address h4{
+        margin-bottom: 15px;
+    }
+    .contact .section form input:nth-child(4){
+        margin: 30px auto;
+    }
+}
+.footer{
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+    padding: 100px 0 0;
+    position: relative;
+    margin-top: 80px;
+}
+.footer::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.footer .container{
+    position: relative;
+    text-align: center;
+    color:white;
+    font-weight: normal;
+}
+.footer img{
+ margin-bottom: 30px;
+}
+.footer .container p:first-of-type{
+ text-transform: uppercase;
+ font-size: 20px;
+ margin-bottom: 30px;
+ padding: 20px;
+ border-bottom: 1px solid white;
+ width: fit-content;
+ margin: auto;
+}
+.footer .container .social-icons{
+    margin-top: 20px;
+}
+.footer .container .social-icons i{
+    font-size: 22px;
+    margin: 0 7px;
+    transition: 0.3s;
+}
+.footer .container p:not(:first-of-type){
+    margin-top: 49px;
+    padding-bottom: 30px;
+
+}
+.footer .container p:not(:first-of-type) span{
+    color: var(--main-color);
+}
+.footer .container .social-icons i:hover{
+    color: var(--main-color);
 }
 
