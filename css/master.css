@@ -888,8 +888,11 @@ margin-right:30px ;
     border: 1px solid white;
     caret-color: var(--main-color);
     border-right: none;
+    color: white;
 }
-
+.subscribe .container input[type="email"]:focus{
+    outline: none;
+}
 .subscribe .container input[type="submit"]{
     width: 130px;
     background-color: var(--main-color);
